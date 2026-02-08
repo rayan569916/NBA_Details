@@ -11,6 +11,10 @@ export class nbaDashboardService{
     baseURL:string='http://127.0.0.1:5000/api';
 
     getNbaPlayerList(): Observable<any>{
-        return this.http.get(`${this.baseURL}/nba/nba_player_list`)
+        return this.http.get(`${this.baseURL}/nba/nba_player_list`);
+    }
+
+    getNbaTeamImage(playerId:number):Observable<any>{
+        return this.http.get(`${this.baseURL}/nba/nba_team_name/${playerId}`);
     }
 }

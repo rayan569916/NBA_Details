@@ -7,7 +7,7 @@ def create_app():
                 "http://127.0.0.1:4200",
                 "http://192.168.0.126:4200"])
 
-    from 'app.routes.nba_player' import nba_player
+    from routes.nba_player import nba_player
     app.register_blueprint(nba_player,url_prefix="/api/nba")
 
     return app
